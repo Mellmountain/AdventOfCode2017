@@ -35,30 +35,20 @@ namespace CodeOfAdvent2017.Day6
                     nextIndex++;
                 }
 
-                string state = "";
+                string currentState = "";
                 for (int i = 0; i < memoryBank.Length; i++)
                 {
-                    state += memoryBank[i];
+                    currentState += memoryBank[i];
                 }
 
-                if (VerifyUniqueState(state, memoryStates))
-                    memoryStates.Add(state);
-                else
+                if (memoryStates.Contains(currentState))
                     break;
+                    
+                memoryStates.Add(currentState);
             }
 
             Console.WriteLine(memoryStates.Count + 1);
             Console.ReadLine();
-        }
-
-        private static bool VerifyUniqueState(string stateToTest, List<string> memoryStates)
-        {
-            foreach (string state in memoryStates)
-            {
-                if (state == stateToTest)
-                    return false;
-            }
-            return true;
         }
 
         private static int GetBankWithMostMemory(int[] memoryBank)
