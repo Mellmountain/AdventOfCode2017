@@ -32,8 +32,6 @@ namespace CodeOfAdvent2017.Day9
                             level--;
                         else if (c == '<')
                             garbage = true;
-                        else if (c == '!')
-                            ignore = true;
                     }
                     else
                     {
