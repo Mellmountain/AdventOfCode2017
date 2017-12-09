@@ -20,7 +20,7 @@ namespace CodeOfAdvent2017.Day7
             Console.ReadLine();
         }
 
-        private static List<Node> ParseChildren(string[] input, List<Node> leafs)
+        public static List<Node> ParseChildren(string[] input, List<Node> leafs)
         {
             List<Node> nodes = new List<Node>();
             foreach (string schema in input)
@@ -46,7 +46,7 @@ namespace CodeOfAdvent2017.Day7
             return nodes;
         }
 
-        private static List<Node> ParseLeafs(string[] input)
+        public static List<Node> ParseLeafs(string[] input)
         {
             List<Node> nodes = new List<Node>();
             foreach (string schema in input)
