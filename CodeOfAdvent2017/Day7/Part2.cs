@@ -15,16 +15,15 @@ namespace CodeOfAdvent2017.Day7
             List<Node> singleNodes = Part1.ParseLeafs(input);
             List<Node> treeSchema = Part1.ParseChildren(input, singleNodes);
             Node root = treeSchema.Find(node => node.parent == null);
-            int totalWeight = root.GetTotalWeight();
 
             int imbalance = 0;
-            Node badNode = findImbalance(root, 0, out imbalance);
+            Node badNode = FindImbalance(root, 0, out imbalance);
 
             Console.WriteLine("Node " + badNode.name + " (" + badNode.weight + ")" + " needs to be adjusted " + imbalance);
             Console.ReadLine();
         }
 
-        private static Node findImbalance(Node node, int diff, out int imbalance)
+        private static Node FindImbalance(Node node, int diff, out int imbalance)
         {
             if (node.children.Count == 0 || ChildrenAreBalanced(node.children))
             {
@@ -36,7 +35,7 @@ namespace CodeOfAdvent2017.Day7
             node.children.Remove(badChild);
             imbalance = node.children.First().totalWeight - badChild.totalWeight;
             diff = imbalance;
-            return findImbalance(badChild, diff, out imbalance);
+            return FindImbalance(badChild, diff, out imbalance);
 
         }
 
