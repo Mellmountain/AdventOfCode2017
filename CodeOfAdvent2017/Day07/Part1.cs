@@ -5,8 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodeOfAdvent2017.Day7
+namespace AdventOfCode2017.Day07
 {
+    /// <summary>
+    /// http://adventofcode.com/2017/day/7
+    /// --- Day 7: Recursive Circus ---
+    /// </summary>
     class Part1
     {
         static void Main()

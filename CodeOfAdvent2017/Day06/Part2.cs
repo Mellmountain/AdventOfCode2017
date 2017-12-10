@@ -5,8 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodeOfAdvent2017.Day6
+namespace AdventOfCode2017.Day06
 {
+    /// <summary>
+    /// http://adventofcode.com/2017/day/6
+    /// --- Day 6: Memory Reallocation ---
+    /// </summary>
     class Part2
     {
         static void Main()

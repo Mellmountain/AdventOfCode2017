@@ -4,8 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodeOfAdvent2017.Day3
+namespace AdventOfCode2017.Day03
 {
+    /// <summary>
+    /// http://adventofcode.com/2017/day/3
+    /// --- Day 3: Spiral Memory ---
+    /// </summary>
     class Part1
     {
         static void Main()

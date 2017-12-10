@@ -5,8 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodeOfAdvent2017.Day4
+namespace AdventOfCode2017.Day04
 {
+    /// <summary>
+    /// http://adventofcode.com/2017/day/4
+    /// --- Day 4: High-Entropy Passphrases ---
+    /// </summary>
     class Part1
     {
         static void Main()

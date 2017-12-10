@@ -5,8 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodeOfAdvent2017.Day8
+namespace AdventOfCode2017.Day08
 {
+    /// <summary>
+    /// http://adventofcode.com/2017/day/8
+    /// --- Day 8: I Heard You Like Registers ---
+    /// </summary>
     class Part1
     {
         public static string registerToModifyName;

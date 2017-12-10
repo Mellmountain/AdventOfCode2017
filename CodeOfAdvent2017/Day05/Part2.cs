@@ -5,8 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodeOfAdvent2017.Day5
+namespace AdventOfCode2017.Day05
 {
+    /// <summary>
+    /// http://adventofcode.com/2017/day/5
+    /// --- Day 5: A Maze of Twisty Trampolines, All Alike ---
+    /// </summary>
     class Part2
     {
         static void Main()

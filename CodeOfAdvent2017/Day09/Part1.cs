@@ -5,8 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodeOfAdvent2017.Day9
+namespace AdventOfCode2017.Day09
 {
+    /// <summary>
+    /// http://adventofcode.com/2017/day/9
+    /// --- Day 9: Stream Processing ---
+    /// </summary>
     class Part1
     {
         static void Main()

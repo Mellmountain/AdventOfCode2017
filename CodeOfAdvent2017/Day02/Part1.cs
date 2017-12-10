@@ -5,8 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CodeOfAdvent2017.Day2
+namespace AdventOfCode2017.Day02
 {
+    /// <summary>
+    /// http://adventofcode.com/2017/day/2
+    /// --- Day 2: Corruption Checksum ---
+    /// </summary>
     class Part1
     {
         static void Main()

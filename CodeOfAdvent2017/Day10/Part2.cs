@@ -6,8 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CodeOfAdvent2017.Day10
+namespace AdventOfCode2017.Day10
 {
+    /// <summary>
+    /// http://adventofcode.com/2017/day/10
+    /// --- Day 10: Knot Hash ---
+    /// </summary>
     class Part2
     {
         [STAThread]
