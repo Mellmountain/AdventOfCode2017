@@ -17,7 +17,7 @@ namespace CodeOfAdvent2017.Day10
             for (int i = 0; i < sparseHash.Length; i++)
                 sparseHash[i] = i;
 
-            string data = File.ReadAllText("Day10\\Input\\test.txt");
+            string data = File.ReadAllText("Day10\\Input\\input.txt");
             string[] input = data.Split(',');
             
             List<int> lengths = EncodeInputToASCII(input);
