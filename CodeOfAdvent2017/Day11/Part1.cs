@@ -4,6 +4,10 @@ using System.Windows.Forms;
 
 namespace AdventOfCode2017.Day11
 {
+    /// <summary>
+    /// http://adventofcode.com/2017/day/11
+    /// --- Day 11: Hex Ed ---
+    /// </summary>
     class Part1
     {
         [STAThread]
