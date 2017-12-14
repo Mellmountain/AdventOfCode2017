@@ -44,8 +44,8 @@ namespace AdventOfCode2017.Day13
     {
         public int depth;
         public int range;
-        int scannerPosition;
-        bool scannerDirectionDown;
+        public int scannerPosition;
+        public bool scannerDirectionDown;
 
         public Layer(int depth, int range)
         {
@@ -53,6 +53,14 @@ namespace AdventOfCode2017.Day13
             this.depth = depth;
             scannerDirectionDown = true;
             scannerPosition = 0;
+        }
+
+        public Layer(int depth, int range, bool scannerDirection, int scannerPos)
+        {
+            this.depth = depth;
+            this.range = range;
+            this.scannerDirectionDown = scannerDirection;
+            this.scannerPosition = scannerPos;
         }
 
         public bool ThreatDetected(int packetDepth)
