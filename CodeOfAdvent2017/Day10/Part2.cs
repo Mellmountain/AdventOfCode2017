@@ -17,19 +17,30 @@ namespace AdventOfCode2017.Day10
         [STAThread]
         static void Main()
         {
+            string data = File.ReadAllText("Day10\\Input\\test.txt");
+            string hexhash = KnotHash(data);
+
+            Console.WriteLine(hexhash);
+            Console.WriteLine(hexhash.Length);
+            Clipboard.SetText(hexhash);
+            Console.ReadLine();
+        }
+
+        public static string KnotHash(string data)
+        {
             int[] sparseHash = new int[256];
             for (int i = 0; i < sparseHash.Length; i++)
                 sparseHash[i] = i;
 
-            string data = File.ReadAllText("Day10\\Input\\input.txt");
-            string[] input = data.Split(',');
             
+            string[] input = data.Split(',');
+
             List<int> lengths = EncodeInputToASCII(input);
 
             /* run 64 rounds */
             int currentPosition = 0;
             int skipSize = 0;
-            for(int i = 0; i < 64; i++)
+            for (int i = 0; i < 64; i++)
             {
                 int[] arrLengths = lengths.ToArray();
                 Part1.KnotHash(ref sparseHash, ref arrLengths, skipSize, currentPosition,
@@ -37,19 +48,14 @@ namespace AdventOfCode2017.Day10
             }
 
             int[] denseHash = GenerateDenseHash(sparseHash);
-
             string hexhash = "";
-            foreach(int part in denseHash)
+            foreach (int part in denseHash)
             {
-                if (part < 10)
+                if (part < 16)
                     hexhash += "0";
                 hexhash += part.ToString("x");
             }
-
-            Console.WriteLine(hexhash);
-            Console.WriteLine(hexhash.Length);
-            Clipboard.SetText(hexhash);
-            Console.ReadLine();
+            return hexhash;
         }
 
         private static int[] GenerateDenseHash(int[] sparseHash)
