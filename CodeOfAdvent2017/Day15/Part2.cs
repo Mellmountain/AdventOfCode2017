@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2017.Day15
 {
+    /// <summary>
+    /// http://adventofcode.com/2017/day/15
+    /// --- Day 15: Dueling Generators ---
+    /// </summary>
     class Part2
     {
         static void Main()
