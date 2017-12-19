@@ -39,8 +39,6 @@ namespace AdventOfCode2017.Day18
             }
             Console.WriteLine("Program1, sendcount: " + program1.sendCount);
             Console.WriteLine("Program0, sendcount: " + program0.sendCount);
-            /* Don't understand why the correct value is in program0? */ 
-            /* Instructions says to get the value out of program1...  */
             Console.WriteLine();
         }
     }
@@ -97,9 +95,9 @@ namespace AdventOfCode2017.Day18
                         /* send register value or value? */
                         int value = 0;
                         if (!Int32.TryParse(parts[1], out value))
-                            partner.AddMessage(registers[parts[1]]);
+                            SendMessage(registers[parts[1]]);
                         else
-                            partner.AddMessage((long)value);
+                            SendMessage((long)value);
                     }
                 }
                 else if (command == "set")
@@ -150,10 +148,10 @@ namespace AdventOfCode2017.Day18
             }
         }
 
-        public void AddMessage(long message)
+        public void SendMessage(long message)
         {
             Console.WriteLine("Program " + programId + " sends " + message);
-            queue.Enqueue(message);
+            partner.queue.Enqueue(message);
             sendCount++;
             autoRest.Set();
 
